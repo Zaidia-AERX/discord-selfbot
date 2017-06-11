@@ -114,37 +114,6 @@ selfBot.on('message', message => {
 });
 
 selfBot.on('message', message => {
-	if(message.author.id === "156914300718415872") {
-		if(message.content.startsWith(prefixBot + "encrypt")) {
-			message.edit("```"+ encrypt(message.content.substr(9)) + "```")
-		}
-	}
-});
-
-selfBot.on('message', message => {
-	if(message.author.id === "156914300718415872") {
-		if(message.content.startsWith(prefixBot + "decrypt")) {
-			message.edit("```"+ decrypt(message.content.substr(9)) + "```")
-		}
-	}
-});
-
-selfBot.on('message', message => {
-	if (message.author.id === "156914300718415872") {
-		if(message.content.startsWith(prefixBot + "shutdown")) {
-			message.channel.sendEmbed({
-				author: {
-					name: selfBot.user.username,
-					icon_url: selfBot.user.avatarURL
-				},
-
-				description: "MiX Bot Shutting Down!"
-			});
-		}
-	}
-});
-
-selfBot.on('message', message => {
 	if (message.author.id === "156914300718415872") {
 		if(message.content === ".ping") {
 			message.edit("```" + selfBot.ping + " ms" + "```")
